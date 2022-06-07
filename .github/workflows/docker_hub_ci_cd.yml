@@ -20,9 +20,12 @@ jobs:
       with:
         node-version: 12.x
 
-    - name: Unit test
+    - name: setup node
       working-directory: ./apc_simulator
       run: npm install
+
+    - name: Unit test
+      working-directory: ./apc_simulator
       run: npm test
     
     # Push the Docker image to Docker Hub
