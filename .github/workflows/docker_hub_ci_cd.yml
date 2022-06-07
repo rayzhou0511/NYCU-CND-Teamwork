@@ -16,8 +16,13 @@ jobs:
       with:
         fetch-depth: 0
 
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
     - name: Unit test
       working-directory: ./apc_simulator
+      run: npm install
       run: npm test
     
     # Push the Docker image to Docker Hub
