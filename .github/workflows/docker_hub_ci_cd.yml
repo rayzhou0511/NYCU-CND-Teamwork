@@ -17,6 +17,7 @@ jobs:
         fetch-depth: 0
 
     - name: Unit test
+      working-directory: ./apc_simulator
       run: npm test
     
     # Push the Docker image to Docker Hub
